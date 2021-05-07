@@ -1,0 +1,288 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+}
+
+a {
+  text-decoration: none;
+}
+
+#background {
+  background-size: cover;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+nav {
+  align-items: center;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 2rem auto;
+  position: relative;
+  width: 90%;
+  z-index: 10;
+}
+
+nav ul {
+  align-items: center;
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 0.5rem;
+}
+
+nav ul li a {
+  color: white;
+  display: block;
+  font-size: calc(14rem / 16);
+  padding: 2rem 1rem 1rem 1rem;
+  position: relative;
+}
+
+nav ul li a::before {
+  background-color: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  content: "";
+  height: 4px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+nav ul li a:hover::before,
+nav ul li.active a::before {
+  opacity: 1;
+}
+
+.side-indicator {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  justify-content: space-evenly;
+  left: 3.5%;
+  position: absolute;
+  top: 15%;
+  width: 100px;
+}
+
+.line {
+  background-color: lightgray;
+  height: 100%;
+  opacity: 0.7;
+  position: absolute;
+  width: 1px;
+}
+
+.index {
+  align-items: center;
+  background-color: darkgray;
+  border-radius: 50%;
+  display: flex;
+  height: 10px;
+  justify-content: center;
+  transition: all 0.7s ease;
+  width: 10px;
+  z-index: 9;
+}
+
+.index p {
+  color: white;
+  font-size: calc(10rem / 16);
+  font-weight: bold;
+  opacity: 0;
+}
+
+.index.active {
+  height: 30px;
+  width: 30px;
+}
+
+.index.active p {
+  opacity: 1;
+}
+
+.content {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+}
+
+.text-wrapper {
+  position: relative;
+  width: 55%;
+}
+
+.text-wrapper .text {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 20rem; /*12 + 8 from margin-bottom in .description*/
+  overflow: hidden;
+  position: relative;
+}
+
+.text-wrapper .text .description {
+  margin-bottom: 8rem;
+  opacity: 0;
+  padding-left: 20%;
+  padding-right: 10%;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transition: all 0.7s ease;
+}
+
+.text-wrapper .text .description.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.text-wrapper .text .description h2 {
+  font-size: 4rem;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+}
+
+.text-wrapper .text .description p {
+  text-shadow: 0 0 15px rgba(0, 0, 0, 1);
+}
+
+.text-wrapper button {
+  align-items: center;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 3px solid rgba(256, 256, 256, 0.8);
+  bottom: 0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-size: 1rem;
+  margin-left: 20%;
+  padding: 0.1rem 2.5rem;
+  position: absolute;
+  transition: color 0.3s ease-out;
+}
+
+.text-wrapper button::before {
+  background: rgba(256, 256, 256, 0.2);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s ease-out;
+  width: 0%;
+}
+
+.text-wrapper button:active {
+  transform: scale(0.95);
+}
+
+.text-wrapper button:hover {
+  color: rgba(256, 256, 256, 1);
+}
+
+.text-wrapper button:hover::before {
+  width: 100%;
+}
+
+.text-wrapper button i {
+  display: inline-block;
+  font-size: 1.8rem;
+  margin-left: 0.8rem;
+}
+
+.glide {
+  width: 45%;
+}
+
+.glide .slide {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  height: 500px;
+  justify-content: center;
+  margin-right: 40px;
+  width: 100%;
+}
+
+.glide .slide .slider-image {
+  border-radius: 10px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s;
+}
+
+.glide .glide__slide--active .slider-image {
+  height: 400px;
+}
+
+.glide .slide .slider-image img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.glide .slide p {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.glide .slide .slider-image .bookmark {
+  align-items: center;
+  background: white;
+  border-radius: 50%;
+  color: gray;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 30px;
+}
+
+.glide .glide__arrows button {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 1rem;
+  opacity: 0.8;
+  font-size: 2rem;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 1);
+  transition: opacity 0.5s ease;
+}
+
+.glide .glide__arrows button:active {
+  transform: scale(0.9);
+}
+
+.glide .glide__arrows button:hover {
+  opacity: 1;
+}

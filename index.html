@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./css/glide.core.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Colombian Landscapes</title>
+  </head>
+  <body>
+    <section>
+      <!-- Menu -->
+      <nav>
+        <h1 class="logo">Logo.</h1>
+        <ul>
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Abaout Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Aside Line -->
+      <div class="side-indicator">
+        <div class="line"></div>
+        <div class="index active"><p>1</p></div>
+        <div class="index"><p>2</p></div>
+        <div class="index"><p>3</p></div>
+        <div class="index"><p>4</p></div>
+      </div>
+
+      <div class="content">
+        <!-- Aside text -->
+        <div class="text-wrapper">
+          <div class="text">
+            <div class="description active">
+              <h2>Cartagena</h2>
+              <p>
+                Cartagena is a port city on Colombia’s Caribbean coast. By the
+                sea is the walled Old Town, founded in the 16th century, with
+                squares, cobblestone streets and colorful colonial buildings.
+              </p>
+            </div>
+            <div class="description">
+              <h2>Tayrona</h2>
+              <p>
+                The foothills of the Sierra Nevada de Santa Marta, the highest
+                coastal mountain in the world, plunge into the sea like the
+                fingers of a gigantic hand forming beautiful bays and coves:
+                Chengue, Gayraca, Cinto, Neguanje, Concha, Guachaquita, with
+                their sandy white beaches surrounded by mangrove swamps.
+              </p>
+            </div>
+            <div class="description">
+              <h2>Guatape</h2>
+              <p>
+                Guatape is a little town located in the Antioquia department in
+                Colombia. It is known as one of the most colorful and beautiful
+                towns in the country. Before Iberian conquerors reached the
+                Antioquia area in the sixteen century, the territory was
+                inhabited by indigenous groups, and ruled by “Guatape”. Guatape
+                was the head of the tribe and so the town was named after him.
+              </p>
+            </div>
+            <div class="description">
+              <h2>Cocora Valley</h2>
+              <p>
+                Hiking Colombia’s Cocora Valley, just outside the pretty little
+                town of Salento, is practically a rite of passage for Colombian
+                travelers these days – the spectacular trail takes in cloud
+                forest, jungle, farmland and, to top it all off, the tallest
+                palm trees in the world.
+              </p>
+            </div>
+          </div>
+          <button class="btn explore">
+            <span>Explore</span><i class="bi bi-arrow-right-short"></i>
+          </button>
+        </div>
+        <!-- Glider Slider -->
+        <div class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide">
+                <div class="slide one">
+                  <p>Old Town</p>
+                  <div class="slider-image">
+                    <img src="./assets/slide1.jpg" alt="" />
+                    <div class="bookmark">
+                      <i class="bi bi-bookmark-heart-fill"></i>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <div class="slide one">
+                  <p>La Minca</p>
+                  <div class="slider-image">
+                    <img src="./assets/slide2.jpg" alt="" />
+                    <div class="bookmark">
+                      <i class="bi bi-bookmark-heart-fill"></i>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <div class="slide two">
+                  <p>Main Street</p>
+                  <div class="slider-image">
+                    <img src="./assets/slide3.jpg" alt="" />
+                    <div class="bookmark">
+                      <i class="bi bi-bookmark-heart-fill"></i>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <div class="slide one">
+                  <p>Palm Three</p>
+                  <div class="slider-image">
+                    <img src="./assets/slide4.jpg" alt="" />
+                    <div class="bookmark">
+                      <i class="bi bi-bookmark-heart-fill"></i>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="glide__arrows" data-glide-el="controls">
+            <button
+              id="prev"
+              class="glide__arrow glide__arrow--left"
+              data-glide-dir="<"
+            >
+              <i class="bi bi-arrow-left-circle"></i>
+            </button>
+            <button
+              id="next"
+              class="glide__arrow glide__arrow--right"
+              data-glide-dir=">"
+            >
+              <i class="bi bi-arrow-right-circle"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="background"></div>
+    </section>
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/106/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="./js/glide.min.js"></script>
+    <script src="./js/hover.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
