@@ -1,7 +1,9 @@
 // Glide
+let startAt = 0;
+
 new Glide(".glide", {
   type: "carousel",
-  startAt: 0,
+  startAt,
   animationTimingFunction: "ease-in-out",
   perView: 3,
   gap: 30,
@@ -11,8 +13,8 @@ new Glide(".glide", {
 let background = document.getElementById("background");
 let indices = document.querySelectorAll(".index");
 let descriptions = document.querySelectorAll(".description");
-let bgImages = ["Cartagena.jpg", "Tayrona.jpg", "Guatape.jpg", "Cocora.jpg"];
-let currentIndex = 0;
+let bgImages = ["Tayrona.jpg", "Guatape.jpg", "Cocora.jpg", "Cartagena.jpg"];
+let currentIndex = startAt;
 let maxLength = indices.length - 1;
 
 // Animations
