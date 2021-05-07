@@ -1,0 +1,24 @@
+{
+  "name": "beautiful-slider-full-page",
+  "version": "1.0.0",
+  "description": "Beautiful slider themed with Colombian landscapes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oscarcontrerasnavas/beautiful-slider-full-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oscarcontrerasnavas/beautiful-slider-full-page/issues"
+  },
+  "homepage": "https://github.com/oscarcontrerasnavas/beautiful-slider-full-page#readme",
+  "dependencies": {
+    "gh-pages": "^3.1.0"
+  }
+}
